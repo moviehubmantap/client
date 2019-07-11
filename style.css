@@ -142,7 +142,23 @@ p {
   color: white;
 }
 
+
+/* -------------------------------- movies ---------------------- */
 #movies-container {
   overflow-y: auto;
-  border: 2px solid black;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.movie-item {
+  background-color: white;
+  padding: 10px 20px;
+  margin: 15px;
+  text-align: center;
+}
+
+.movie-item p {
+  margin: 10px 0;
 }
