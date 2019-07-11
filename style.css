@@ -1,0 +1,148 @@
+body, html {
+  margin:  0;
+  padding:  0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #41B883;
+}
+p {
+  margin: 0;
+}
+
+#navbar {
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px; */
+  background-color: #41B883;
+  color: white;
+  font-size: 18px;
+}
+
+#first-bar {
+  display: flex;
+}
+
+#second-bar {
+  display: flex;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+.link:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.185);
+}
+
+#nav-logout:hover{
+  background-color: rgba(255, 0, 0, 0.616);
+}
+
+/* ----------------------------- form --------------------------------- */
+
+.title-form {
+  font-size: 36px;
+}
+
+#outside {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.form {
+  margin-top: 30px;
+  /* margin: 50px auto; */
+  color: white;
+  width: 30%;
+  padding: 15px;
+  background-color: #41B883;
+  border: 2px solid #41B883;
+  text-align: center;
+}
+.field {
+  margin: 10px auto;
+  width: 300px;
+}
+.field label{
+  color: white;
+  text-align: left;
+  font-size: 16px;
+}
+
+.field input[type=text] {
+  /* color: white; */
+  border: 2px solid white;
+  background-color: white;
+  padding: 0  5px;
+}
+.field input[type=password] {
+  /* color: white; */
+  border: 2px solid white;
+  background-color: white;
+  padding: 0 5px;
+}
+
+.input-field input[type=text]:focus {
+  border: none;
+}
+
+
+/* ------------------------------ inside --------------------------- */
+
+#inside {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#search-bar {
+  margin: 30px auto;
+  width: 1000px;
+}
+
+.input-field{
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  justify-content: space-evenly;
+}
+
+.input-field input[type=text] {
+  border: 2px solid #2BBBAD;
+  border-radius: 15px;
+  color: black;
+  padding: 0 15px;
+  background-color: white;
+}
+
+.input-field input[type=text]:focus + label {
+  color: white;
+}
+
+.input-field input[type=text]:focus {
+  border: none;
+}
+
+#title {
+  /* text-align: center; */
+  transition-delay: 0.3s;
+  color: white;
+}
+
+#movies-container {
+  overflow-y: auto;
+  border: 2px solid black;
+}
