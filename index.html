@@ -7,6 +7,7 @@
   <title>MovieHub</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <meta name="google-signin-client_id" content="297783023893-a96b4ln0fmufv8n47hhro324ffaumehi.apps.googleusercontent.com">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -40,7 +41,7 @@
       <div class="submit-btn">
         <input class="btn" type="submit" value="Login">
         <p style="margin-top: 20px;">Or login with : </p>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div class="g-signin2 google-btn" data-onsuccess="onSignIn"></div>
       </div>
     </form>
     <form id="register-form" class="form z-depth-3">
@@ -65,8 +66,6 @@
       </div>
       <div class="submit-btn">
         <input class="btn is-primary" type="submit" value="Register">
-        <p style="margin-top: 20px;">Or login with : </p>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
       </div>
     </form>
   </div>
@@ -83,9 +82,11 @@
       </div>
     </form>
     <div id="movies-container">
-
+    </div>
+    <div id="movie-detail-container" class="z-depth-4">
     </div>
   </div>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script
@@ -94,6 +95,7 @@
   crossorigin="anonymous"></script>
   <script src="./js/ajax.js"></script>
   <script src="./js/setPage.js"></script>
+  <script src="./js/modal-detail.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>

@@ -31,4 +31,5 @@ $(document).ready(function() {
     setPage('#outside', '#inside')
   }
 
+  changeDisplay(false, '#movie-detail-container')
 })

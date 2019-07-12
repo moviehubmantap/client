@@ -3,7 +3,7 @@ body, html {
   padding:  0;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #41B883;
 }
 p {
@@ -94,6 +94,15 @@ p {
 }
 
 
+.submit-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.google-btn {
+  margin: auto;
+}
+
 /* ------------------------------ inside --------------------------- */
 
 #inside {
@@ -152,13 +161,85 @@ p {
   justify-content: space-evenly;
 }
 
+#movies-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+#movies-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#movies-container::-webkit-scrollbar-thumb {
+  background:  #41B883;
+}
+
 .movie-item {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   padding: 10px 20px;
   margin: 15px;
   text-align: center;
+  
+}
+.btn-detail {
+  margin-top: 10px;
 }
 
 .movie-item p {
   margin: 10px 0;
+}
+
+.movie-title {
+  font-size: 20px;
+}
+
+
+/* --------------------- movie- detail --------------------- */
+
+#movie-detail-container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  color: white;
+  overflow-y: auto;
+  /* margin: 0 20px; */
+}
+#movie-detail-title {
+  margin: 0;
+}
+#movie-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#movie-detail {
+  width: 100%;
+  display: flex;
+}
+
+
+.good-score {
+  background-color: rgba(0, 0, 255, 0.425);
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.bad-score {
+  background-color: rgba(255, 0, 0, 0.671);
+  margin: 10px 0;
+  padding: 10px;
+}
+#movie-detail-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+#movie-detail-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#movie-detail-container::-webkit-scrollbar-thumb {
+  background:  #41B883;
 }
