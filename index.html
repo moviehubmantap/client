@@ -6,51 +6,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MovieHub</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <meta name="google-signin-client_id" content="297783023893-a96b4ln0fmufv8n47hhro324ffaumehi.apps.googleusercontent.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-  <div id="navbar">
-
+  <div id="navbar" class="z-depth-2">
+    <div id="first-bar">
+      <p style="margin: 0 30px;">MovieHub</p>
+      <p style="margin-left: 5px;">Welcome</p>
+    </div>
+    <div id="second-bar">
+      <p id="nav-register" class="nav-item link login-false">Register</p>
+      <p id="nav-login" class="nav-item link login-false">Login</p>
+      <p id="nav-logout" class="nav-item link login-true">Logout</p>
+    </div>
   </div>
-  <div id="outside">
-    <form id="login-form">
+  <div id="outside" class="animated fadeInDown">
+    <form id="login-form" class="form z-depth-3">
+      <p class="title-form">Login</p>
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Email" id="i-login-email">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input class="input" type="password" placeholder="Password" id="i-login-password">
+        </div>
+      </div>
+      <div class="submit-btn">
+        <input class="btn" type="submit" value="Login">
+        <p style="margin-top: 20px;">Or login with : </p>
+        <div class="g-signin2 google-btn" data-onsuccess="onSignIn"></div>
+      </div>
     </form>
-    <form id="register-form">
+    <form id="register-form" class="form z-depth-3">
+      <p class="title-form">Register</p>
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Name" id="i-register-name">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Email" id="i-register-email">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input class="input" type="password" placeholder="Password" id="i-register-password">
+        </div>
+      </div>
+      <div class="submit-btn">
+        <input class="btn is-primary" type="submit" value="Register">
+      </div>
     </form>
   </div>
   <div id="inside">
-    <div id="searchPage" class=" container">
-      <div class="row">
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4">
-          <form>
-              <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span id="Gofind" class="input-group-text" id="basic-addon1">Go</span>
-                  </div>
-                  <input id="inputMovie" type="text" class="form-control" placeholder="movie name" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
-        </div><!-- /.col-lg-6 -->
-        <div class="col-lg-4"></div>
-        </form>
+    <h1 id="title">
+      Welcome to MovieHub !
+    </h1>
+    <form id="search-bar">
+      <div class="input-field col s6 ">
+        <input placeholder="Search Movies..." id="search-input" type="text" class="z-depth-2">
+        <button class="btn waves-effect waves-light" type="submit" name="action" style="margin-left: 40px; margin-bottom: 10px;">Search
+          <i class="material-icons right">send</i>
+        </button>
       </div>
-      <div id="relatedNews" class="container">
-        <h3>Related News</h3>
-      </div>
-      <div id="detailnews" class="container"></div>
+    </form>
+    <div id="movies-container">
     </div>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+    <div id="movie-detail-container" class="z-depth-4">
+    </div>
+  </div>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="./js/similar-movies.js"></script>
+  <script src="./js/ajax.js"></script>
+  <script src="./js/setPage.js"></script>
+  <script src="./js/modal-detail.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
