@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MovieHub</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <div id="navbar">
 
@@ -19,11 +23,34 @@
     <form id="register-form">
     </form>
   </div>
-  <div id="inside"></div>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+  <div id="inside">
+    <div id="searchPage" class=" container">
+      <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+          <form>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span id="Gofind" class="input-group-text" id="basic-addon1">Go</span>
+                  </div>
+                  <input id="inputMovie" type="text" class="form-control" placeholder="movie name" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-4"></div>
+        </form>
+      </div>
+      <div id="relatedNews" class="container">
+        <h3>Related News</h3>
+      </div>
+      <div id="detailnews" class="container"></div>
+    </div>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
