@@ -8,16 +8,16 @@
   <title>MovieHub</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  <meta name="google-signin-client_id" content="297783023893-a96b4ln0fmufv8n47hhro324ffaumehi.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="459525586087-5c1krtm5nbdmabhoj0ifpoaggr3oivbu.apps.googleusercontent.com">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
   <div id="navbar" class="z-depth-2">
     <div id="first-bar">
       <p style="margin: 0 30px;">MovieHub</p>
-      <p style="margin-left: 5px;">Welcome</p>
+      <p style="margin-left: 5px;" class="login-true">Welcome</p>
+      <p id="username" class="login-true"></p>
     </div>
     <div id="second-bar">
       <p id="nav-register" class="nav-item link login-false">Register</p>
@@ -49,9 +49,9 @@
     <form id="register-form" class="form z-depth-3">
       <p class="title-form">Register</p>
       <div class="field">
-        <label class="label">Name</label>
+        <label class="label">Username</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Name" id="i-register-name">
+          <input class="input" type="text" placeholder="Username" id="i-register-username">
         </div>
       </div>
       <div class="field">
@@ -95,8 +95,9 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <script src="./js/similar-movies.js"></script>
   <script src="./js/ajax.js"></script>
+  <script src="./js/news.js"></script>
+  <script src="./js/similar-movies.js"></script>
   <script src="./js/setPage.js"></script>
   <script src="./js/modal-detail.js"></script>
   <script src="./js/main.js"></script>

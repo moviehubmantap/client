@@ -24,7 +24,37 @@ function appendDetail(result) {
     <p id="similar-text">Similar Movies :</p>
       <div id="similar-list"></div>
     </div>
+    <p id="news-text">Related News : </p>
+    <div id="relatedNews"></div>
+    <div id="detailNews"></div>
   `)
+  getNews(omdbMovie.Title)
+}
+
+function clickSimilar() {
+  $('.similar-item').click(function(event) {
+    $('#movie-detail-container').empty()
+    event.preventDefault()
+    let movieTitle = this.id
+    fetchOmdbByTitle(movieTitle)
+    .then(detail => {
+      omdbMovie = detail
+      return fetchSimiliar(detail.Title)
+    })
+    .then(result => {
+      appendDetail(result)
+      if(omdbMovie.imdbRating > 7) {
+        $('#movie-detail-score').addClass('good-score')
+      } else {
+        $('#movie-detail-score').addClass('bad-score')
+      }
+      setSimilar(result)
+      clickSimilar()
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  })
 }
 
 function openDetail(movieId) {
@@ -43,27 +73,8 @@ function openDetail(movieId) {
       $('#movie-detail-score').addClass('bad-score')
 
     }
-
     setSimilar(result)
-    $('.similar-item').click(function(event) {
-      $('#movie-detail-container').empty()
-      event.preventDefault()
-      let movieTitle = this.id
-      fetchOmdbByTitle(movieTitle)
-      .then(detail => {
-        omdbMovie = detail
-        return fetchSimiliar(detail.Title)
-      })
-      .then(result => {
-        appendDetail(result)
-        if(omdbMovie.imdbRating > 7) {
-          $('#movie-detail-score').addClass('good-score')
-        } else {
-          $('#movie-detail-score').addClass('bad-score')
-        }
-        setSimilar(result)
-      })
-    })
+    clickSimilar()
   })
   .fail(err => console.log(err))
   
