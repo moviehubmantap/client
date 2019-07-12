@@ -2,12 +2,11 @@ $('#search-bar').submit(function(event) {
   event.preventDefault()
   $('#movies-container').empty()
   let input = $('#search-input').val()
-  console.log(input)
   searchOmdb(input)
   .done(result => {
     $('#title').addClass('animated fadeOutUp')
-    changeDisplay(false, '#title')
-    console.log(result)
+    changeDisplay(true, ['#movies-container'])
+    changeDisplay(false, ['#title', '#movie-detail-container'])
     result.Search.forEach(movie => {
       $('#movies-container').append(`
         <div class="movie-item z-depth-3">

@@ -28,7 +28,8 @@ $(document).ready(function() {
     changeDisplay(true, ['#inside', '.login-true'])
     changeDisplay(false, ['#outside', '.login-false'])
   } else {
-    setPage('#outside', '#inside')
+    changeDisplay(true, ['#outside', '.login-false'])
+    changeDisplay(false, ['#inside', '.login-true'])
   }
 
   changeDisplay(false, '#movie-detail-container')
