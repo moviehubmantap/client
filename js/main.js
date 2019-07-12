@@ -7,7 +7,7 @@ function onSignIn(googleUser) {
 
     })
     .done(function(data){
-        alert(data)
+        console.log('masuk ajax')
         localStorage.setItem('token', data)
     })
     .fail(function(err) {
