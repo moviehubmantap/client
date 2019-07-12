@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google-signin-client_id" content="129498215760-uuslj25vaiat1l2ra22i44rn0qm0edr4.apps.googleusercontent.com">
   <title>MovieHub</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -11,7 +12,7 @@
 </head>
 <body>
   <div id="navbar">
-
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
   </div>
   <div id="outside">
     <form id="login-form">
@@ -20,6 +21,15 @@
     </form>
   </div>
   <div id="inside"></div>
+  <a href="#" onclick="signOut();">Sign out</a>
+  <script>
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+  </script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
